@@ -1,6 +1,5 @@
 package org.hbrs.s1.ws22.uebung1.control;
 
-
 public class GermanTranslator implements Translator {
 
 	public String date = "Okt/2022"; // Default-Wert
@@ -8,17 +7,14 @@ public class GermanTranslator implements Translator {
 	/**
 	 * Methode zur Übersetzung einer Zahl in eine String-Repraesentation
 	 */
-	public String translateNumber(int number) throws IndexOutOfBoundsException {
+	public String translateNumber(int number) {
 		try {
 			String [] feld ={"eins","zwei","drei","vier","fuenf","sechs","sieben","acht","neun","Zehn"};
 			return feld[number-1];
 		} catch (IndexOutOfBoundsException e) {
-			e.getMessage();
-			System.out.println("Übersetzung der Zahl ["+ number+"] nicht moeglich ! ");
-			System.out.println("Versionsnummer der Translator: " +Translator.version);
-			System.out.println(e);
+			throw new IndexOutOfBoundsException("Uebersetzung der Zahl ["+ number+"] nicht moeglich !"+
+												"Versionsnummer der Translator: " +Translator.version);
 		}
-		return null;
 	}
 
 	/**
@@ -30,7 +26,8 @@ public class GermanTranslator implements Translator {
 
 	/**
 	 * Setzen des Datums, wann der Uebersetzer erzeugt wurde (Format: Monat/Jahr (Beispiel: Okt/2022))
-	 * Das Datum sollte system-intern durch eine Control-Klasse gesetzt werden und nicht von externen View-Klassen
+	 * Das Datum sollte system-intern durch eine Control-Klasse gesetzt werden
+	 * und nicht von externen View-Klassen
 	 */
 	public void setDate( String date ) {
 		this.date = date;

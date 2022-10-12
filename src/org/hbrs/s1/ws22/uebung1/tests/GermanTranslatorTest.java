@@ -1,34 +1,24 @@
 package org.hbrs.s1.ws22.uebung1.tests;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import org.hbrs.s1.ws22.uebung1.control.GermanTranslator;
 import org.hbrs.s1.ws22.uebung1.control.Translator;
 import org.hbrs.s1.ws22.uebung1.control.TranslatorFactory;
 import org.junit.Test;
-
-
- 
-
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class GermanTranslatorTest {
 
-
+    Translator translator = TranslatorFactory.creatGermanTranslator();
     @Test
-    public void germanTranlatorTest(){
-        Translator translator = TranslatorFactory.creatGermanTranslator();
-        assertEquals("sechs", translator.translateNumber(6));
-
+    public void translatNumberTestAssertEqual(){
+       assertEquals("sechs", translator.translateNumber(6));
     }
-
-   /* @Test
-    public void germanTranlatorTest2() throws IndexOutOfBoundsException {
-        Translator translator = TranslatorFactory.creatGermanTranslator();
-        IndexOutOfBoundsException e = null;
-        assertThrows(e.getMessage(), translator.translateNumber(14));
-
-    }*/
-
+    @Test
+    public void translatNumberTestAssertFalse(){
+        assertNotEquals("drei", translator.translateNumber(2));
+    }
+    @Test
+    public void translatNumberTestAssertThrows() {
+        assertThrows(IndexOutOfBoundsException.class, () -> translator.translateNumber(14));
+    }
 
 }
