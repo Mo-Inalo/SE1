@@ -13,7 +13,8 @@ public class TranslatorFactory {
 
     public static Translator creatGermanTranslator() {
         // Das Datum konsistent einsetzen in Germantranslator
-
-        return new GermanTranslator();
+        GermanTranslator germanTranslator = new GermanTranslator();
+        germanTranslator.setDate("Okt/2022");
+        return new germanTranslator();
     }
 }
