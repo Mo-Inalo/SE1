@@ -1,6 +1,6 @@
-package org.hbrs.s1.ws22.uebung1.tests;
+package org.hbrs.s1.ws22.uebung1.test;
 import org.hbrs.s1.ws22.uebung1.control.Translator;
-import org.hbrs.s1.ws22.uebung1.control.TranslatorFactory;
+import org.hbrs.s1.ws22.uebung1.util.TranslatorFactory;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,4 +1,7 @@
-package org.hbrs.s1.ws22.uebung1.control;
+package org.hbrs.s1.ws22.uebung1.util;
+
+import org.hbrs.s1.ws22.uebung1.control.GermanTranslator;
+import org.hbrs.s1.ws22.uebung1.control.Translator;
 
 /*
 * Anwendung des Factory Method Design Pattern

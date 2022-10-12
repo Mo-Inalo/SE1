@@ -1,7 +1,7 @@
 package org.hbrs.s1.ws22.uebung1.view;
 
 import org.hbrs.s1.ws22.uebung1.control.*;
-import org.hbrs.s1.ws22.uebung1.control.TranslatorFactory;
+import org.hbrs.s1.ws22.uebung1.util.TranslatorFactory;
 
 public class Client {
 
