@@ -10,15 +10,15 @@ public class GermanTranslatorTest {
     Translator translator = TranslatorFactory.creatGermanTranslator();
     @Test
     public void translatNumberTestAssertEqual(){
-       assertEquals("sechs", translator.translateNumber(6));
+       assertEquals("fuenf", translator.translateNumber(5));
     }
     @Test
     public void translatNumberTestAssertFalse(){
         assertNotEquals("drei", translator.translateNumber(2));
     }
     @Test
-    public void translatNumberTestAssertThrows() {
-        assertThrows(IndexOutOfBoundsException.class, () -> translator.translateNumber(14));
+    public void translatNumberTestNegAssertThrows() {
+        assertThrows(IndexOutOfBoundsException.class, () -> translator.translateNumber(-4));
     }
 
 }

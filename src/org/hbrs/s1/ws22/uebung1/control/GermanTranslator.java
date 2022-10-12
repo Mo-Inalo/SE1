@@ -13,7 +13,7 @@ public class GermanTranslator implements Translator {
 			return feld[number-1];
 		} catch (IndexOutOfBoundsException e) {
 			throw new IndexOutOfBoundsException("Uebersetzung der Zahl ["+ number+"] nicht moeglich !"+
-												"Versionsnummer der Translator: " +Translator.version);
+					 							"Versionsnummer der Translator: " +Translator.version);
 		}
 	}
 
@@ -32,5 +32,7 @@ public class GermanTranslator implements Translator {
 	public void setDate( String date ) {
 		this.date = date;
 	}
+
+
 
 }
